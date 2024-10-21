@@ -1,38 +1,11 @@
-use rand::Rng;
-use std::io;
+// use rand::Rng;
+// use std::io;
 
 fn main() {
-    
-    guessing_game();
+    let k = 55;
+    //FIXME: add random number
+ let s= 555;
+    println!("Guess the number!{} - {}", k, s);
 
 }
 
-
-fn guessing_game() {
-    println!("Guess the number!");
-
-    let secret_number = rand::thread_rng().gen_range(  1..=100);
-    loop {
-        println!("Please input your guess.");
-        let mut guess = String::new();
-        io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
-
-        let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(_) => continue,
-        };
-
-        println!("You guessed: {guess}");
-
-        if guess < secret_number {
-            println!("Too small!");
-        } else if guess > secret_number {
-            println!("Too big!");
-        } else {
-            println!("You win!");
-            break;
-        }
-    }
-}

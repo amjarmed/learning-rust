@@ -326,3 +326,8 @@ cargo test
 3. Build a Game or Chat Application: These introduce you to asynchronous programming and concurrency, which are essential in Rust.
 4. Try a Cryptographic Tool or Blockchain: These projects will help you work with advanced data structures, memory management, and security.
 5. Implement a Memory Allocator or OS Kernel: These are advanced projects for systems programming and provide deep insight into low-level Rust.
+
+### vscode extensions
+
+- **must have in vscode:** rust-analyzer , CodeLLDB, even Better Toml
+- **recommended in vscode:** Dependi, Error Lens , todo tree , copilot
