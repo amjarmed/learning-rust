@@ -1,13 +1,17 @@
-// use rand::Rng;
-// use std::io;
-use druid::{AppLauncher, Widget, WindowDesc, widget::Label};
-
-
-fn build_ui() -> impl Widget<()> {
-    Label::new("Hello, World!")
-}
 fn main() {
-   let main_window= WindowDesc::new(build_ui()) ;
-   AppLauncher::with_window(main_window).launch(()).expect("launch failed");
+    let x = String::from("hello");
+    let y = 100;
+    take_ownership(x.clone());
+    take_ownership(x);
+    make_copy(y);
+    make_copy(y);
+    make_copy(y);
 }
 
+fn take_ownership(some_string: String) {
+    println!("{}", some_string);
+}
+
+fn make_copy(some_integer: i32) {
+    println!("{}", some_integer);
+}
